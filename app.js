@@ -27,6 +27,16 @@ function deletarTarefa(event){
         event.target.parentElement.parentElement.remove()
     }
 
+    if(event.target.classList.contains("edit")){
+        let novaTarefa = prompt ("Edite a Tarefa")
+        event.target.parentElement.parentElement.innerHTML = `${novaTarefa}
+        <div class="buttons">
+            <button class="delete">Apagar</button>
+            <button class="edit">Editar</button>
+            </div>`
+
+    }
+
 }
 
 button.addEventListener("click", inserirTarefa)
